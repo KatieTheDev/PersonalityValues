@@ -61,8 +61,8 @@
         }
     }
 80
-    econArray = ["Lawful","Neutral","Chaotic"]
-    diplArray = ["Good","Netural","Evil"]
+    stabArray = ["Lawful","Neutral","Chaotic"]
+    karmArray = ["Good","Netural","Evil"]
 
     function setLabel(val,ary) {
         if (val > 100) { return "" } else
@@ -82,15 +82,15 @@
     setBarValue("peace", peace)
     setBarValue("might", might)
 
-    document.getElementById("economic-label").innerHTML = setLabel(equality, econArray)
-    document.getElementById("diplomatic-label").innerHTML = setLabel(might, diplArray)
+    document.getElementById("economic-label").innerHTML = setLabel(equality, stabArray)
+    document.getElementById("diplomatic-label").innerHTML = setLabel(might, karmArray)
 
     ideology = ""
     ideodist = Infinity
     for (var i = 0; i < ideologies.length; i++) {
         dist = 0
-        dist += Math.pow(Math.abs(ideologies[i].stats.econ - equality), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.dipl - peace), 1.73856063)
+        dist += Math.pow(Math.abs(ideologies[i].stats.stab - equality), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.karm - peace), 1.73856063)
         if (dist < ideodist) {
             ideology = ideologies[i].name
             ideodist = dist

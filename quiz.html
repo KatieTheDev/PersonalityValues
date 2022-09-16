@@ -10,7 +10,7 @@
 <script type="application/javascript"
         src="questions.js">
 </script>
-<h1>8values</h1>
+<h1>PersonalityValues</h1>
 <hr>
 <h2 style="text-align:center;" id="question-number">Loading...</h2>
 <p class="question" id="question-text"></p>
@@ -24,15 +24,15 @@
 
 <!-- JavaScript for the test itself -->
 <script>
-    var max_econ, max_dipl, max_govt, max_scty; // Max possible scores
-    max_econ = max_dipl = max_govt = max_scty = 0;
-    let econ_array = new Array(questions.length);
-    let dipl_array = new Array(questions.length);
+    var max_stab, max_karm; // Max possible scores
+    max_stab = max_karm = 0;
+    let stab_array = new Array(questions.length);
+    let karm_array = new Array(questions.length);
     var qn = 0; // Question number
     init_question();
     for (var i = 0; i < questions.length; i++) {
-        max_econ += Math.abs(questions[i].effect.econ)
-        max_dipl += Math.abs(questions[i].effect.dipl)
+        max_stab += Math.abs(questions[i].effect.stab)
+        max_karm += Math.abs(questions[i].effect.karm)
     }
     function init_question() {
         document.getElementById("question-text").innerHTML = questions[qn].question;
@@ -48,8 +48,8 @@
     }
 
     function next_question(mult) {
-        econ_array[qn] = mult*questions[qn].effect.econ
-        dipl_array[qn] = mult*questions[qn].effect.dipl
+        stab_array[qn] = mult*questions[qn].effect.stab
+        karm_array[qn] = mult*questions[qn].effect.karm
         qn++;
         if (qn < questions.length) {
             init_question();
@@ -71,11 +71,11 @@
     }
 
     function results() {
-        let final_econ = econ_array.reduce((a, b) => a + b, 0)
-        let final_dipl = dipl_array.reduce((a, b) => a + b, 0)
+        let final_stab = stab_array.reduce((a, b) => a + b, 0)
+        let final_karm = karm_array.reduce((a, b) => a + b, 0)
         location.href = `results.html`
-            + `?e=${calc_score(final_econ,max_econ)}`
-            + `&d=${calc_score(final_dipl,max_dipl)}`
+            + `?e=${calc_score(final_stab,max_stab)}`
+            + `&d=${calc_score(final_karm,max_karm)}`
     }
 </script>
 </body>
