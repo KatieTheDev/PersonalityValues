@@ -7,5 +7,12 @@ questions = [
             "govt": 0,
             "scty": 0
         }
+    },
+    {
+        "question":"Do you crack your knuckles?"
+        "effect": {
+            "econ": 5,
+            "dipl" 0,
+        }
     }
 ];
