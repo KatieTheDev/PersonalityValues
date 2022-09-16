@@ -3,7 +3,7 @@ ideologies = [
         "name": "Lawful Good",
         "stats": {
             "econ": 75,
-            "dipl": 75,
+            "dipl": 25,
         }
     },
     {
