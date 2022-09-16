@@ -33,5 +33,12 @@ questions = [
             "econ": 30,
             "dipl": 0
         }
+    },
+    {
+        "question":"I would kill two random people to save your best friend's life.",
+        "effect": {
+            "econ": 50,
+            "dipl": 0
+        }
     }
 ];
