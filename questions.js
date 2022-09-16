@@ -24,7 +24,7 @@ questions = [
         "question":"If given the chance, I would press a button to kill a random person around the world in order to get ten million dollars in return.",
         "effect": {
             "econ": 0,
-            "dipl": -35
+            "dipl": 35
         }
     },
     {
