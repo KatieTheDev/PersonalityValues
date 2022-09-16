@@ -75,7 +75,7 @@
     equality  = getQueryVariable("e")
     peace     = getQueryVariable("d")
     wealth    = (100 - equality).toFixed(1)
-    might     = (100 - peace   ).toFixed(1)
+    might     = (100 - peace   ).toFixed(1)80
 
     setBarValue("equality", equality)
     setBarValue("wealth", wealth)
@@ -83,7 +83,7 @@
     setBarValue("might", might)
 
     document.getElementById("economic-label").innerHTML = setLabel(equality, econArray)
-    document.getElementById("diplomatic-label").innerHTML = setLabel(peace, diplArray)
+    document.getElementById("diplomatic-label").innerHTML = setLabel(might, diplArray)
 
     ideology = ""
     ideodist = Infinity
