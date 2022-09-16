@@ -12,7 +12,7 @@ questions = [
         "question":"Do you crack your knuckles?",
         "effect": {
             "econ": 5,
-            "dipl" 0,
+            "dipl" 0
         }
     }
 ];
