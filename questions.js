@@ -9,7 +9,7 @@ questions = [
         }
     },
     {
-        "question":"Do you crack your knuckles?"
+        "question":"Do you crack your knuckles?",
         "effect": {
             "econ": 5,
             "dipl" 0,
