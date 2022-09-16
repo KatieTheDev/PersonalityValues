@@ -47,7 +47,7 @@
            for (var i=0;i<vars.length;i++) {
                    var pair = vars[i].split("=")
                    if(pair[0] == variable) {return pair[1]}
-           }
+           }80
            return(NaN);
     }
 
@@ -60,19 +60,15 @@
             innerel.style.visibility = "hidden"
         }
     }
-
+80
     econArray = ["Lawful","Neutral","Chaotic"]
-    diplArray = ["Good","Netural","Evil","True"]
+    diplArray = ["Good","Netural","Evil"]
 
     function setLabel(val,ary) {
         if (val > 100) { return "" } else
-        if (val > 90) { return ary[0] } else
-        if (val > 75) { return ary[1] } else
-        if (val > 60) { return ary[2] } else
-        if (val >= 40) { return ary[3] } else
-        if (val >= 25) { return ary[4] } else
-        if (val >= 10) { return ary[5] } else
-        if (val >= 0) { return ary[6] } else
+        if (val > 66) { return ary[0] } else
+        if (val > 33) { return ary[1] } else
+        if (val > 0) { return ary[2] } else
         	{return ""}
     }
 
