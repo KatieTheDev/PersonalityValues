@@ -62,7 +62,7 @@
     }
 80
     econArray = ["Lawful","Neutral","Chaotic"]
-    diplArray = ["Evil","Netural","Good"]
+    diplArray = ["Good","Netural","Evil"]
 
     function setLabel(val,ary) {
         if (val > 100) { return "" } else
@@ -83,7 +83,7 @@
     setBarValue("might", might)
 
     document.getElementById("economic-label").innerHTML = setLabel(equality, econArray)
-    document.getElementById("diplomatic-label").innerHTML = setLabel(peace, diplArray)
+    document.getElementById("diplomatic-label").innerHTML = setLabel(might, diplArray)
 
     ideology = ""
     ideodist = Infinity
